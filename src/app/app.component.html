@@ -1,0 +1,36 @@
+<div>
+  <button (click)="openTabsModal()">Open Tabs Modal</button>
+  <ui-modal #uiTabsModal>
+    <div class="header">
+      <button class="visible-xs hidden-md-up btn btn-primary mobile_btn">Apply</button>
+    </div>
+    <div class="body">
+      <div class="hidden-sm-down">
+        <ui-tabs [tabAlign]="'left'">
+          <ui-tab [tabHeading]="'General'">
+            <general-from></general-from>
+          </ui-tab>
+          <ui-tab [tabHeading]="'Notifications'">
+            <notification-form></notification-form>
+          </ui-tab>
+        </ui-tabs>
+      </div>
+      <div class="hidden-md-up mobile_view">
+          <h1>
+              General
+          </h1>
+          <general-from></general-from>
+          <h1>
+              Notifications
+          </h1>
+          <notification-form></notification-form>
+      </div>
+    </div>
+    <div class="footer ">
+      <button class="btn btn-default pull-left defaults">Restore defaults</button>
+     <div class="pull-right col-xs-6"> 
+       <button class="btn btn-default hidden-sm-down cancel" (click)="closeTabsModal()">Cancel</button>
+      <button class="btn btn-primary hidden-sm-down apply">Apply</button></div>
+    </div>
+  </ui-modal>
+</div>

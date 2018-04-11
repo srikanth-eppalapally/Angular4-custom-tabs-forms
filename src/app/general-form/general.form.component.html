@@ -1,0 +1,21 @@
+<div>
+    <form class="ganeral_form">
+        <div class="form-group">
+            <label>Default Language</label>
+            <ui-select [name]="'language'"  [required]="true" (onChangeUiSelect)="onLanguageChange($event)" [selectedOption]="generalFormValues.language" [options]="languages"></ui-select>
+        </div>
+        <div class="form-group">
+            <label>Display Name</label>
+            <ui-select [name]="'display'" [required]="true" (onChangeUiSelect)="onDisplayNameChange($event)" [selectedOption]="generalFormValues.displayName" [options]="displayNames"></ui-select>
+        </div>
+        <div class="form-group">
+            <label>PlaceHolder</label>
+            <ui-select [name]="'placeholder'" [required]="true" (onChangeUiSelect)="onPlaceHolderChange($event)" [selectedOption]="generalFormValues.language" [options]="languages"></ui-select>
+        </div>
+
+        <div class="form-group">
+                <label>System Time out</label>
+                <ui-select [name]="'time'" [required]="true" (onChangeUiSelect)="onSytemTimeOutChange($event)" [selectedOption]="generalFormValues.language" [options]="languages"></ui-select>
+            </div>
+    </form>
+</div>

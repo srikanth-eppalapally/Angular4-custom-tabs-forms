@@ -1,0 +1,26 @@
+
+@font-face{
+    font-family: "myriad-set-pro_text";
+    src:url('../../fonts/myriad-set-pro_text.ttf')
+}
+@font-face{
+    font-family: "myriad-set-pro_thin";
+    src:url('../../fonts/myriad-set-pro_thin.ttf')
+}
+.ganeral_form{
+    .form-group{
+    margin: 0;
+    padding: 0;
+    label{
+        font-size: 14px;
+        color:#333;
+        margin-bottom: 15px;
+        width: 100%;
+        font-family: "myriad-set-pro_text";
+        @media screen and (max-width: 767px){
+            margin-bottom: 10px;
+        }
+
+    }
+}
+}

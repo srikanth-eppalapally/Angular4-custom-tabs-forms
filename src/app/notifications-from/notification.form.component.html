@@ -1,0 +1,37 @@
+<div>
+    <form>
+        <div class="form-group">
+            <label>keep Notifications for</label>
+            <ui-select [name]="'display'" [required]="true" (onChangeUiSelect)="onNotificationDurationChange($event)" [selectedOption]="notificationFormValues.notificationDuration" [options]="notificationsDuration"></ui-select>
+        </div>
+        <div class="form-group">
+                <label>Do not Disturb</label>
+                <div class="radio">
+                    <label>
+                         <input type="radio" [value]="true" name="dnd" [(ngModel)]="notificationFormValues.dnd">On
+                         <span class="custom_redio"></span>
+                    </label>
+                </div>
+                <div class="radio">
+                     <label>
+                        <input type="radio" [value]="false" name="dnd" [(ngModel)]="notificationFormValues.dnd">Off
+                        <span class="custom_redio"></span>
+                    </label>
+                </div>
+            </div>
+ 
+            <div class="form-group" *ngIf="notificationFormValues.dnd">
+                <p>Select a date range to turn off notifications</p>
+                <div class="calendar_p">
+                    <label>From</label>                
+                    <p-calendar name="fromDate" [(ngModel)]="notificationFormValues.fromDate" inputStyleClass="form-control"></p-calendar>
+                    <p-calendar name="fromTime" [(ngModel)]="notificationFormValues.fromTime" [timeOnly]="true" inputStyleClass="form-control"></p-calendar>
+                </div>
+                <div>
+                        <label>To</label>
+                        <p-calendar name="endDate" [(ngModel)]="notificationFormValues.endDate" inputStyleClass="form-control"></p-calendar>
+                        <p-calendar  name="endTime" [(ngModel)]="notificationFormValues.endTime" [timeOnly]="true" inputStyleClass="form-control"></p-calendar>
+                    </div>
+            </div>
+    </form>
+</div>

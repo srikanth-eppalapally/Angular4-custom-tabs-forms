@@ -1,0 +1,80 @@
+@font-face{
+    font-family: "myriad-set-pro_text";
+    src:url('../../fonts/myriad-set-pro_text.ttf')
+}
+@font-face{
+    font-family: "myriad-set-pro_thin";
+    src:url('../../fonts/myriad-set-pro_thin.ttf')
+}
+
+.form-group{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    display: inline-block;
+    label{
+        float: left;
+        width:100%;
+        font-family: "myriad-set-pro_text";
+        font-size: 14px;
+        color:#333;
+    }
+    .radio{
+        display: inline-block;
+        label{
+            float: left;
+            width:80px;
+            margin: 0;
+            position: relative;           
+            .custom_redio{
+                position: absolute;
+                padding: 7px;
+                border: 1px solid #ccc;
+                border-radius: 100%;
+                left: -4px;
+                top: 1px;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    padding: 7px;
+                    background: #2096d1;
+                    border-radius: 100%;
+                    display: none;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;                   
+                    padding: 3px;
+                    background:#fff;
+                    border-radius: 100%;
+                    top: 4px;
+                    left: 4px;
+                    display: none;
+                }
+            }
+            input{
+                margin-right: 5px;
+                opacity: 0;
+                &:checked ~ .custom_redio{
+                    border-color: transparent;
+                    &::before{
+                        display: block;
+                    }
+                    &::after{
+                        display: block;
+                    }
+
+                }
+            }
+        }
+    }
+p{
+    font-family: "myriad-set-pro_text";
+    font-size: 14px;
+    color:#999;
+    margin-bottom: 15px;
+}
+
+}

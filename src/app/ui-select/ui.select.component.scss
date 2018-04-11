@@ -1,0 +1,19 @@
+
+@font-face{
+    font-family: "myriad-set-pro_text";
+    src:url('../../fonts/myriad-set-pro_text.ttf')
+}
+
+select{
+    font-family: "myriad-set-pro_text";
+    font-size: 14px;
+    color:#666;
+    margin-bottom: 26px;
+    width: 203px;
+    padding:8px;
+    @media screen and (max-width: 767px){
+        width: 100%;
+    }
+
+    
+}

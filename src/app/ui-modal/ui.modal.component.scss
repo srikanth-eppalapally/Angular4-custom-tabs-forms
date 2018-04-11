@@ -1,0 +1,52 @@
+@font-face{
+    font-family: "myriad-set-pro_text";
+    src:url('../../fonts/myriad-set-pro_text.ttf')
+}
+@font-face{
+    font-family: "myriad-set-pro_thin";
+    src:url('../../fonts/myriad-set-pro_thin.ttf')
+}
+.modal.fade.in {
+    opacity: 1;
+    display: block;
+}
+.modal{
+    overflow-y: scroll;
+    @media screen and (max-width: 767px){
+        left:20px;
+        right:20px;
+    }
+    .modal-dialog{
+        transform: translate(0,0%);
+        max-width: 930px;
+        .modal-content{
+            border-radius: 0;
+       
+        .modal-header{
+            padding: 5px;
+            padding-bottom: 40px;
+        .close{
+            border: 0;
+            position: absolute;
+            left: 26px;
+            top: 26px;
+            font-size: 38px;
+            padding: 0;
+            font-family: "myriad-set-pro_thin";
+        }
+        .main-heading{
+            float: left;
+            width: 100%;
+            font-family: "myriad-set-pro_thin";
+            color: #ccc;
+            font-size: 28px;
+            margin: 8px 0;
+            text-align: center;
+        }
+    }
+    .modal-body{
+        padding: 0;
+    }
+}
+    }
+}
